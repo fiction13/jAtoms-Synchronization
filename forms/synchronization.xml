@@ -1,24 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fields name="params">
-		<fieldset name="task_params">
-			<field name="showcase_key" type="text"
-				   label="PLG_TASK_ATOMS_SYNCHRONIZATION_TASKS_TASK_SYNCHRONIZATION_PARAMS_SHOWCASE_KEY"
-				   class="input-xxlarge"
-				   required="true"/>
-		</fieldset>
-	</fields>
+    <fields name="params">
+        <fieldset name="task_params">
+            <field name="showcase_key" type="text"
+                   label="PLG_TASK_ATOMS_SYNCHRONIZATION_TASKS_TASK_SYNCHRONIZATION_PARAMS_SHOWCASE_KEY"
+                   class="input-xxlarge"
+                   required="true"/>
+        </fieldset>
+    </fields>
 
-	<fields name="execution_rules">
-		<fieldset name="basic">
-			<field
-				name="rule-type"
-				type="ExecutionRule"
-				label="COM_SCHEDULER_FIELD_LABEL_EXEC_RULE"
-				required="true"
-				validate="options"
-				optionsFilter="interval-hours,interval-days,interval-months,manual"
-			/>
-		</fieldset>
-	</fields>
+    <fields name="execution_rules">
+        <fieldset name="basic">
+            <field
+                    name="rule-type"
+                    type="ExecutionRule"
+                    label="COM_SCHEDULER_FIELD_LABEL_EXEC_RULE"
+                    required="true"
+                    validate="options"
+                    optionsFilter="interval-hours,interval-days,interval-months,manual"
+            />
+
+            <field
+                    name="interval-hours"
+                    type="integer"
+                    first="3" last="21" step="3" default="3"
+                    label="COM_SCHEDULER_FIELD_LABEL_INTERVAL_HOURS"
+                    description=""
+                    showon="rule-type:interval-hours"
+            />
+
+            <field
+                    name="interval-days"
+                    type="integer"
+                    first="1" last="31" step="1" default="1"
+                    label="COM_SCHEDULER_FIELD_LABEL_INTERVAL_DAYS"
+                    description=""
+                    showon="rule-type:interval-days"
+            />
+
+            <field
+                    name="interval-months"
+                    type="integer"
+                    first="1" last="12" step="1" default="1"
+                    label="COM_SCHEDULER_FIELD_LABEL_INTERVAL_MONTHS"
+                    description=""
+                    showon="rule-type:interval-months"
+            />
+
+            <field
+                    name="exec-day"
+                    type="integer"
+                    label="COM_SCHEDULER_LABEL_EXEC_DAY"
+                    first="1" last="31" step="1" default="1"
+                    showon="rule-type:interval-months"
+            />
+        </fieldset>
+    </fields>
 </form>

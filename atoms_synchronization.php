@@ -1,7 +1,7 @@
 <?php
 /*
  * @package    jAtomS - Synchronization plugin
- * @version    __DEPLOY_VERSION__
+ * @version    1.0.1
  * @author     Atom-S - atom-s.com
  * @copyright  Copyright (c) 2017 - 2022 Atom-S LLC. All rights reserved.
  * @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -11,7 +11,6 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\Filesystem\Path;
 use Joomla\CMS\Form\Form;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\MVC\Model\BaseDatabaseModel;
@@ -34,7 +33,7 @@ class PlgTaskAtoms_Synchronization extends CMSPlugin implements SubscriberInterf
 	 *
 	 * @var  boolean
 	 *
-	 * @since  _DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $autoloadLanguage = true;
 
@@ -43,14 +42,14 @@ class PlgTaskAtoms_Synchronization extends CMSPlugin implements SubscriberInterf
 	 *
 	 * @var  JDatabaseDriver
 	 *
-	 * @since  _DEPLOY_VERSION__
+	 * @since  1.0.0
 	 */
 	protected $db = null;
 
 	/**
 	 * @var string[]
 	 *
-	 * @since _DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	private const TASKS_MAP = [
 		'atoms_synchronization.synchronization' => [
@@ -65,7 +64,7 @@ class PlgTaskAtoms_Synchronization extends CMSPlugin implements SubscriberInterf
 	 *
 	 * @return string[]
 	 *
-	 * @since _DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	public static function getSubscribedEvents(): array
 	{
@@ -83,7 +82,7 @@ class PlgTaskAtoms_Synchronization extends CMSPlugin implements SubscriberInterf
 	 *
 	 * @return int Status code.
 	 *
-	 * @since _DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	protected function synchronization(ExecuteTaskEvent $event): int
 	{
@@ -299,7 +298,7 @@ class PlgTaskAtoms_Synchronization extends CMSPlugin implements SubscriberInterf
 	 *
 	 * @throws Exception
 	 *
-	 * @since _DEPLOY_VERSION__
+	 * @since 1.0.0
 	 */
 	private function memoryRemoveLimit(): bool
 	{

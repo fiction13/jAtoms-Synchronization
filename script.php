@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    jAtomS - Synchronization plugin
- * @version    __DEPLOY_VERSION__
+ * @version    1.0.1
  * @author     Atom-S - atom-s.com
  * @copyright  Copyright (c) 2017 - 2022 Atom-S LLC. All rights reserved.
  * @license    GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -25,7 +25,7 @@ class plgTaskAtomS_SynchronizationInstallerScript
 	 *
 	 * @return  boolean True on success, false on failure.
 	 *
-	 * @since  2.14.2-dev
+	 * @since  1.0.0
 	 */
 	function postflight($type, $parent)
 	{
@@ -42,7 +42,7 @@ class plgTaskAtomS_SynchronizationInstallerScript
 	 *
 	 * @param   InstallerAdapter  $parent  Parent object calling object.
 	 *
-	 * @since  2.14.2-dev
+	 * @since  1.0.0
 	 */
 	protected function enablePlugin($parent)
 	{

@@ -2,12 +2,12 @@
 <extension version="3.9" type="plugin" group="task" method="upgrade">
 	<name>PLG_TASK_ATOMS_SYNCHRONIZATION</name>
 	<author>Atom-S</author>
-	<creationDate>June 2022</creationDate>
+	<creationDate>July 2022</creationDate>
 	<copyright>Copyright (c) 2017 - 2022 Atom-S LLC. All rights reserved.</copyright>
 	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>hello@atom-s.com</authorEmail>
 	<authorUrl>https://atom-s.com/</authorUrl>
-	<version>1.0.1-dev</version>
+	<version>1.0.1</version>
 	<description>PLG_TASK_ATOMS_SYNCHRONIZATION_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
